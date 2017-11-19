@@ -13,19 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
-from learn import views as learn_views
-admin.autodiscover()
+from main import views as main_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    # views.index
-    url(r'^$', learn_views.index, name='index'),
-    url(r'^temp/$', learn_views.temp, name='temp'),
-    url(r'^add_form/$', learn_views.add_form, name='add_form'),
-    url(r'^add/$', learn_views.add, name='add'),
-    url(r'^add/(\d+)/(\d+)/$', learn_views.old_url_redirect),
-    url(r'^new_add/(\d+)/(\d+)/$', learn_views.add2, name='add2'),
+    url(r'^main/', include('main.urls')),
+    url(r'^learn/', include('learn.urls')),
+
+    url(r'^$', main_views.index, name='index'),
 ]
