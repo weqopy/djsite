@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <title>首页</title> -->
+</head>
+<body>
+    <!-- 引用 base 文件 -->
+    <!-- 引用位置、表现形式待完善 -->
+    {% extends 'learn/base.html' %}
+    {% block content %}
+        <h1>首页内容</h1>
+        <p>几组数据结构的展示<br></p>
+
+        <p>
+            字符串<br/>
+            {{ string_1 }}<br/>
+        </p>
+
+        <p>
+            列表元素<br/>
+            {% for i in list_1 %}
+            {{ i }}<br/>
+            {% endfor %}
+        </p>
+
+        <p class="dict_1">
+            字典元素<br/>
+            first_name: {{ dict_1.first_name }}<br/>
+            last_name: {{ dict_1.last_name }}<br/>
+        </p>
+
+        <p>
+            循环<br/>
+            {% for item in list_2 %}
+                {{ item }}{% if not forloop.last %},{% endif %}
+            {% endfor %}
+        </p>
+
+        <p>
+            条件判断<br/>
+            {% if if_num > 100 %}
+                大于100
+            {% elif if_num <= 100 %}
+                if_num 不大于100
+            {% endif %}
+        </p>
+    {% endblock %}
+</body>
+</html>
