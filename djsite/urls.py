@@ -22,7 +22,7 @@ urlpatterns = [
 
     url(r'^main/', include('main.urls')),
     url(r'^learn/', include('learn.urls')),
-    url(r'^polls/$', include('polls.urls')),
+    url(r'^polls/', include('polls.urls')),
 
     url(r'^$', main_views.index, name='index'),
 ]
