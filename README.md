@@ -13,3 +13,8 @@
 4. `heroku config:set DISABLE_COLLECTSTATIC=1`
 5. 修改`settings.py`文件，设置`static`文件信息
 6. `git push heroku master`
+
+
+# 注意事项
+
+- 更改 models.py 文件后，需要使用`python manage.py makemigrations`将更改记录为迁移文件，之后需要使用`python manage.py migrate`运行迁移文件
