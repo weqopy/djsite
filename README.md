@@ -1,6 +1,7 @@
 # Django learn
 
 [自强学堂](https://code.ziqiangxuetang.com/django/django-tutorial.html)
+[Django Documentation](https://docs.djangoproject.com/en/1.11/intro/tutorial01/)
 
 # 部署
 
