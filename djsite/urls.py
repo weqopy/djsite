@@ -17,12 +17,13 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from main import views as main_views
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^main/', include('main.urls')),
     url(r'^learn/', include('learn.urls')),
-    url(r'^polls/', include('polls.urls')),
+    url(r'^polls/', include('polls.urls', namespace='polls')),
 
     url(r'^$', main_views.index, name='index'),
 ]
