@@ -18,3 +18,7 @@
 # 注意事项
 
 - 更改 models.py 文件后，需要使用`python manage.py makemigrations`将更改记录为迁移文件，之后需要使用`python manage.py migrate`运行迁移文件
+
+# 临时笔记
+- pk 为'primary key'（主键）的缩写，此时可忽略主键具体变量名，尽量使用 pk
+- 尽量多的 test

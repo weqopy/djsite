@@ -13,7 +13,8 @@ def index(request):
     if_num = 99
     # 字典调用
     # 'string_1': string_1, 后者对应 home 中变量，前者对应 html 文件中变量
-    context = {'string_1': string_1, 'list_1': list_1, 'dict_1': dict_1, 'list_2': list_2, 'if_num': if_num}
+    context = {'string_1': string_1, 'list_1': list_1,
+               'dict_1': dict_1, 'list_2': list_2, 'if_num': if_num}
     return render(request, 'learn/index.html', context)
 
 
