@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^main/', include('main.urls')),
     url(r'^learn/', include('learn.urls')),
     url(r'^polls/', include('polls.urls', namespace='polls')),
-    url(r'^form/$', message_views.getfrom, name='getform'),
+    url(r'^form/$', message_views.getform, name='getform'),
 
     url(r'^$', main_views.index, name='index'),
 ]
