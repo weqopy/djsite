@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from main import views as main_views
+from message import views as message_views
 
 
 urlpatterns = [
@@ -24,6 +25,7 @@ urlpatterns = [
     url(r'^main/', include('main.urls')),
     url(r'^learn/', include('learn.urls')),
     url(r'^polls/', include('polls.urls', namespace='polls')),
+    url(r'^form/$', message_views.getfrom, name='getform'),
 
     url(r'^$', main_views.index, name='index'),
 ]

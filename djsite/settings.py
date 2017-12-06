@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'learn',
     'main',
     'polls',
+    'message',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +78,11 @@ WSGI_APPLICATION = 'djsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'testdjango',
+        'USER': 'root',
+        'PASSWORD': 'wsf1230',
+        'HOST': '127.0.0.1'
     }
 }
 
@@ -123,10 +127,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
-STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, 'static'), )
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, 'static'),
+]
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
