@@ -1,6 +1,9 @@
 # Django learn
 
+`py_dj_xadmin`分支来自慕课网课程[Python升级3.6 强力Django+杀手级Xadmin打造在线教育平台](http://coding.imooc.com/class/78.html)
+
 [自强学堂](https://code.ziqiangxuetang.com/django/django-tutorial.html)
+
 [Django Documentation](https://docs.djangoproject.com/en/1.11/intro/tutorial01/)
 
 # 部署
