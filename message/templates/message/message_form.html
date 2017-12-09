@@ -13,7 +13,8 @@
     </h1>
     <label>
         <span>姓名 :</span>
-        <input id="name" type="text" value="{{ my_message.name }}" name="name" class="error" placeholder="请输入您的姓名"/>
+        <!-- value="{{ my_message.name }}"调用 views 中获取到的 my_message -->
+        <input id="name" type="text" name="name" class="error" placeholder="请输入您的姓名"/>
         <div class="error-msg"></div>
     </label>
 

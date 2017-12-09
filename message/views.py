@@ -14,7 +14,7 @@ def getform(request):
         # print(message.name)
         # message.delete()
 
-    # POST方法
+    # POST方法，保存至数据库
     if request.method == 'POST':
         name = request.POST.get('name', '')
         message = request.POST.get('message', '')
